@@ -196,8 +196,8 @@ export default function App() {
   };
 
   return (
-    <div className="h-full flex flex-col mx-auto max-w-[1400px]">
-      <header className="flex justify-between items-center px-6 pb-4 border-b border-gray-800 shrink-0">
+    <div className="flex-1 w-full flex flex-col mx-auto max-w-[1400px] pt-4 lg:pt-6">
+      <header className="flex justify-between items-center px-4 lg:px-6 pb-4 border-b border-gray-800 shrink-0">
         <h1 className="text-xl font-semibold tracking-tight">TwinMind</h1>
         <button 
           onClick={() => setShowSettings(true)}
@@ -207,7 +207,7 @@ export default function App() {
         </button>
       </header>
 
-      <main className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 p-4 lg:p-6 overflow-y-auto lg:overflow-hidden">
+      <main className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 p-4 lg:p-6 overflow-y-auto lg:overflow-hidden">
         <MicTranscript 
           isRecording={isRecording}
           toggleRecording={toggleRecording}

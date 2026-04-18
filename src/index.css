@@ -4,12 +4,13 @@
 
 @layer base {
   html, body, #root {
-    @apply h-full overflow-hidden m-0 p-0;
+    @apply w-full overflow-hidden m-0 p-0;
+    height: 100dvh;
   }
   body {
     @apply bg-gray-950 text-gray-50 antialiased;
   }
   #root {
-    @apply relative flex flex-col h-screen pt-4;
+    @apply relative flex flex-col;
   }
 }
