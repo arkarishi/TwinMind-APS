@@ -196,7 +196,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex-1 w-full flex flex-col mx-auto max-w-[1400px] pt-4 lg:pt-6">
+    <div className="flex-1 min-h-0 w-full flex flex-col mx-auto max-w-[1400px] pt-4 lg:pt-6">
       <header className="flex justify-between items-center px-4 lg:px-6 pb-4 border-b border-gray-800 shrink-0">
         <h1 className="text-xl font-semibold tracking-tight">TwinMind</h1>
         <button 
