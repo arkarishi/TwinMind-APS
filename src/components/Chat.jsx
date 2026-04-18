@@ -5,10 +5,12 @@ import remarkGfm from 'remark-gfm';
 
 export default function Chat({ messages, onSendMessage, isLoading }) {
   const [input, setInput] = useState('');
-  const endRef = useRef(null);
+  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
+    }
   }, [messages]);
 
   const handleSubmit = (e) => {
@@ -26,7 +28,10 @@ export default function Chat({ messages, onSendMessage, isLoading }) {
         </h2>
       </div>
 
-      <div className="flex-1 overflow-y-auto space-y-4 pr-2 mb-4 scrollbar-thin">
+      <div 
+        ref={scrollContainerRef}
+        className="flex-1 overflow-y-auto space-y-4 pr-2 mb-4 scrollbar-thin"
+      >
         {messages.length === 0 ? (
           <div className="text-gray-500 text-sm text-center mt-10">
             Ask questions about the meeting or click a suggestion.
@@ -57,7 +62,6 @@ export default function Chat({ messages, onSendMessage, isLoading }) {
             </div>
           ))
         )}
-        <div ref={endRef} />
       </div>
 
       <form onSubmit={handleSubmit} className="flex space-x-2 relative">
