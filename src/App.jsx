@@ -198,7 +198,7 @@ export default function App() {
   return (
     <div className="h-full flex flex-col mx-auto max-w-[1400px]">
       <header className="flex justify-between items-center px-6 pb-4 border-b border-gray-800 shrink-0">
-        <h1 className="text-xl font-semibold tracking-tight">TwinMind Copilot</h1>
+        <h1 className="text-xl font-semibold tracking-tight">TwinMind</h1>
         <button 
           onClick={() => setShowSettings(true)}
           className="p-2 hover:bg-gray-800 rounded-md transition-colors"
