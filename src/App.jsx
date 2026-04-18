@@ -207,7 +207,7 @@ export default function App() {
         </button>
       </header>
 
-      <main className="flex-1 overflow-hidden grid grid-cols-3 gap-6 p-6 h-[calc(100vh-80px)]">
+      <main className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 p-4 lg:p-6 overflow-y-auto lg:overflow-hidden">
         <MicTranscript 
           isRecording={isRecording}
           toggleRecording={toggleRecording}

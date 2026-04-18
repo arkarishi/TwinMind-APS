@@ -16,8 +16,8 @@ export default function Suggestions({
   onSuggestionClick 
 }) {
   return (
-    <div className="flex flex-col h-full bg-gray-900 rounded-xl border border-gray-800 p-4 min-h-0">
-      <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-800">
+    <div className="flex flex-col h-[60vh] lg:h-full bg-gray-900 rounded-xl border border-gray-800 p-4 min-h-0 relative">
+      <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-800 shrink-0">
         <h2 className="font-semibold text-lg flex items-center space-x-2">
           <span>Live Suggestions</span>
         </h2>
